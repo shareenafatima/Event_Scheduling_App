@@ -1,7 +1,7 @@
 <%= render @event %>
 
 <% if event_author(@event) %>
-<%= link_to 'Edit', edit_instrument_path(@event), class:'button' %>
+<%= link_to 'Edit', edit_event_path(@event), class:'button' %>
 
- <%= button_to "Destroy this instrument", @event, method: :delete, class:'button' %>
+ <%= button_to "Destroy this event", @event, method: :delete, class:'button' %>
 <% end %>
