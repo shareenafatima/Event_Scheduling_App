@@ -1,6 +1,7 @@
 <%= render @event %>
 
-<% if user_signed_in? && current_user == @event.user %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-  <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if event_author(@event) %>
+<%= link_to 'Edit', edit_instrument_path(@event), class:'button' %>
+
+ <%= button_to "Destroy this instrument", @event, method: :delete, class:'button' %>
 <% end %>
